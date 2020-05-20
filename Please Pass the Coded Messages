@@ -1,0 +1,165 @@
+Please Pass the Coded Messages
+==============================
+
+You need to pass a message to the bunny prisoners, but to avoid detection, the code you agreed to use is... obscure, to say the least. The bunnies are given food on standard-issue prison plates that are stamped with the numbers 0-9 for easier sorting, and you need to combine sets of plates to create the numbers in the code. The signal that a number is part of the code is that it is divisible by 3. You can do smaller numbers like 15 and 45 easily, but bigger numbers like 144 and 414 are a little trickier. Write a program to help yourself quickly create large numbers for use in the code, given a limited number of plates to work with.
+
+You have L, a list containing some digits (0 to 9). Write a function solution(L) which finds the largest number that can be made from some or all of these digits and is divisible by 3. If it is not possible to make such a number, return 0 as the solution. L will contain anywhere from 1 to 9 digits.  The same digit may appear multiple times in the list, but each element in the list may only be used once.
+
+Languages
+=========
+
+To provide a Java solution, edit Solution.java
+To provide a Python solution, edit solution.py
+
+Test cases
+==========
+Your code should pass the following test cases.
+Note that it may also be run against hidden test cases not shown here.
+
+-- Java cases --
+Input:
+Solution.solution({3, 1, 4, 1})
+Output:
+    4311
+
+Input:
+Solution.solution({3, 1, 4, 1, 5, 9})
+Output:
+    94311
+
+-- Python cases --
+Input:
+solution.solution([3, 1, 4, 1])
+Output:
+    4311
+
+Input:
+solution.solution([3, 1, 4, 1, 5, 9])
+Output:
+    94311
+
+Use verify [file] to test your solution and see how it does. When you are finished editing your code, use submit [file] to submit your answer. If your solution passes the test cases, it will be removed from your home folder.
+foobar:~/please-pass-the-coded-messages iamabhinavmishra22$ edit Solution.java
+foobar:~/please-pass-the-coded-messages iamabhinavmishra22$ verify Solution.java
+Verifying solution...
+Test 1 failed 
+Test 2 failed 
+Test 3 failed  [Hidden]
+Test 4 failed  [Hidden]
+Test 5 failed  [Hidden]
+foobar:~/please-pass-the-coded-messages iamabhinavmishra22$ verify Solution.java
+Verifying solution...
+Test 1 passed!
+Test 2 passed!
+Test 3 failed  [Hidden]
+Test 4 passed! [Hidden]
+Test 5 passed! [Hidden]
+foobar:~/please-pass-the-coded-messages iamabhinavmishra22$ verify Solution.java
+Verifying solution...
+Test 1 passed!
+Test 2 passed!
+Test 3 failed  [Hidden]
+Test 4 passed! [Hidden]
+Test 5 passed! [Hidden]
+foobar:~/please-pass-the-coded-messages iamabhinavmishra22$ verify Solution.java
+Verifying solution...
+All test cases passed. Use submit Solution.java to submit your solution
+foobar:~/please-pass-the-coded-messages iamabhinavmishra22$ submit Solution.java
+Are you sure you want to submit your solution?
+[Y]es or [N]o: y
+Submitting solution...
+Awesome! Commander Lambda was so impressed by your efforts that she's made you her personal assistant. You'll be helping her directly with her work, which means you'll have access to all of her files-including the ones on the LAMBCHOP doomsday device. This is the chance you've been waiting for. Can you use your new access to finally topple Commander Lambda's evil empire?
+Submission: SUCCESSFUL.
+
+Level 2 complete
+You are now on level 3
+Challenges left to complete level: 3
+
+Level 1: 100% [==========================================]
+Level 2: 100% [==========================================]
+Level 3:   0% [..........................................]
+Level 4:   0% [..........................................]
+Level 5:   0% [..........................................]
+
+
+
+public static int solution(int[] l) {
+		int sum = 0; // initialize sum 
+        int i; 
+        int[] count = new int[10]; 
+        for ( i = 0; i < l.length; i++)  
+        { 
+            count[l[i]]++; 
+        } 
+  
+        // Store 
+        int index = 0; 
+        for (i = 0; i <10; i++)  
+        { 
+            while (count[i] > 0)  
+            { 
+                l[index++] = i; 
+                count[i]--; 
+            } 
+        } 
+        // Iterate through all elements and add them to sum 
+        for (i = 0; i < l.length; i++) 
+           sum +=  l[i];
+        int rem =sum%3;
+        int[] rem2=new int[2];
+        rem2[0]=-1;
+        rem2[1]=-1;
+        if(rem==0) {
+        	return formnum_print(l,rem2[0],rem2[1]);
+        }
+        if(rem==1) {
+        for(i=0;i<l.length;i++) {
+        	if(l[i]%3==1) {
+        		return formnum_print(l,i,rem2[1]);
+        	}
+        }
+       for(i=0;i<l.length;i++) {
+        	if(l[i]%3==2) {
+        		if(rem2[0]==-1)
+        			rem2[0]=i;
+        		else
+        			{rem2[1]=i;
+        			break;}
+        			}
+        	}
+       	if(rem2[0]!=-1 && rem2[1]!=-1)
+       		return formnum_print(l,rem2[0],rem2[1]);
+      }
+        if(rem==2) {
+        	//take 1 or 2 digit num which give remainder 2
+
+           
+            for(i=0;i<l.length;i++) {
+            	if(l[i]%3==2) {
+            		return formnum_print(l,i,rem2[1]);
+            	}
+            }
+            for(i=0;i<l.length;i++) {
+            	if(l[i]%3==1) {
+            		if(rem2[0]==-1)
+            			rem2[0]=i;
+            		else
+            			{rem2[1]=i;
+            			break;}
+            			}
+            	}
+            if(rem2[0]!=-1 && rem2[1]!=-1)
+           		return formnum_print(l,rem2[0],rem2[1]);
+        }
+        return 0;
+	}
+	
+	private static int formnum_print(int[] l, int j, int k) {
+		int num=0;
+        for(int i=l.length-1;i>-1;i--)
+        	if(i!=j && i!=k)
+        	num=num*10 + l[i];
+        return num;
+
+		
+	}
