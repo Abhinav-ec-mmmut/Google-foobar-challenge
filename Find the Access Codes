@@ -41,3 +41,106 @@ Input:
 solution.solution([1, 1, 1])
 Output:
     1
+    
+      
+		int[] a=new int[l.length];
+		int[] b=new int[l.length];
+		for(int i=0;i<l.length-1;i++)
+			for(int j=i+1;j<l.length;j++)
+				if(l[j]%l[i]==0) {
+					a[i]++;
+					b[j]++;
+				}
+		int count=0;
+		for(int i=0;i<l.length;i++)
+			count+=a[i]*b[i];
+		    
+		    
+		    
+		    return count;
+            
+            
+            foobar:~/find-the-access-codes iamabhinavmishra22$  verify Solution.java
+Verifying solution...
+All test cases passed. Use submit Solution.java to submit your solution
+foobar:~/find-the-access-codes iamabhinavmishra22$ submit Solution.java
+Are you sure you want to submit your solution?
+[Y]es or [N]o: y
+Submitting solution...
+Excellent! You've destroyed Commander Lambda's doomsday device and saved Bunny Planet! But there's one small problem: the LAMBCHOP was a wool-y important part of her space station, and when you blew it up, you triggered a chain reaction that's tearing the station apart. Can you rescue the imprisoned bunnies and escape before the entire thing explodes?
+Submission: SUCCESSFUL. Completed in: 4 hrs, 54 mins, 35 secs.
+
+Level 3 complete
+You are now on level 4
+Challenges left to complete level: 2
+
+Level 1: 100% [==========================================]
+Level 2: 100% [==========================================]
+Level 3: 100% [==========================================]
+Level 4:   0% [..........................................]
+Level 5:   0% [..........................................]
+
+Refer a friend: "https://foobar.withgoogle.com/?eid=T6lv5" (Unused)
+
+Type request to request a new challenge now, or come back later.
+
+The code is strong with this one...
+You can now share your solutions with a Google recruiter!
+If you opt in, Google staffing may reach out to you regarding career opportunities.
+We will use your information in accordance with our Applicant and Candidate Privacy Policy.
+[#1] Do you wish to proceed?
+[Y]es [N]o [A]sk me later: y
+Please tell us a bit about yourself to help us connect you with the right recruiter. By answering these questions you agree to our Applicant and Candidate Privacy Policy.
+[#2] First name:Abhinav
+[#3] Last name:Mishra
+[#4] Email:iamabhinavmishra22@gmail.com
+Use tab key twice to see list of available country/region choices.
+[#5] Country/Region:
+Afghanistan    Åland Islands    Albania    Algeria    American Samoa    Andorra    Angola    Anguilla    Antarc
+tica    Antigua & Barbuda    Argentina    Armenia    Aruba    Australia    Austria    Azerbaijan    Bahamas    
+Bahrain    Bangladesh    Barbados    Belarus    Belgium    Belize    Benin    Bermuda    Bhutan    Bolivia    B
+osnia & Herzegovina    Botswana    Bouvet Island    Brazil    British Indian Ocean Territory    British Virgin 
+Islands    Brunei    Bulgaria    Burkina Faso    Burundi    Cambodia    Cameroon    Canada    Cape Verde    Car
+ibbean Netherlands    Cayman Islands    Central African Republic    Chad    Chile    China    Christmas Island 
+   Cocos (Keeling) Islands    Colombia    Comoros    Congo (DRC)    Congo (Republic)    Cook Islands    Costa R
+ica    Côte d’Ivoire    Croatia    Cuba    Curaçao    Cyprus    Czech Republic    Denmark    Djibouti    Domini
+ca    Dominican Republic    Ecuador    Egypt    El Salvador    Equatorial Guinea    Eritrea    Estonia    Ethio
+pia    Falkland Islands (Islas Malvinas)    Faroe Islands    Fiji    Finland    France    French Guiana    Fren
+ch Polynesia    French Southern Territories    Gabon    Gambia    Georgia    Germany    Ghana    Gibraltar    G
+reece    Greenland    Grenada    Guadeloupe    Guam    Guatemala    Guernsey    Guinea    Guinea-Bissau    Guya
+na    Haiti    Heard & McDonald Islands    Honduras    Hong Kong    Hungary    Iceland    India    Indonesia   
+ Iran    Iraq    Ireland    Isle of Man    Israel    Italy    Jamaica    Japan    Jersey    Jordan    Kazakhsta
+n    Kenya    Kiribati    Kuwait    Kyrgyzstan    Laos    Latvia    Lebanon    Lesotho    Liberia    Libya    L
+iechtenstein    Lithuania    Luxembourg    Macau    Macedonia (FYROM)    Madagascar    Malawi    Malaysia    Ma
+ldives    Mali    Malta    Marshall Islands    Martinique    Mauritania    Mauritius    Mayotte    Mexico    Mi
+cronesia    Moldova    Monaco    Mongolia    Montenegro    Montserrat    Morocco    Mozambique    Myanmar (Burm
+a)    Namibia    Nauru    Nepal    Netherlands    New Caledonia    New Zealand    Nicaragua    Niger    Nigeria
+    Niue    Norfolk Island    North Korea    Northern Mariana Islands    Norway    Oman    Pakistan    Palau   
+ Palestine    Panama    Papua New Guinea    Paraguay    Peru    Philippines    Pitcairn Islands    Poland    Po
+rtugal    Puerto Rico    Qatar    Réunion    Romania    Russia    Rwanda    Samoa    San Marino    São Tomé & P
+ríncipe    Saudi Arabia    Senegal    Serbia    Seychelles    Sierra Leone    Singapore    Sint Maarten    Slov
+akia    Slovenia    Solomon Islands    Somalia    South Africa    South Georgia & South Sandwich Islands    Sou
+th Korea    South Sudan    Spain    Sri Lanka    St. Barthélemy    St. Helena    St. Kitts & Nevis    St. Lucia
+    St. Martin    St. Pierre & Miquelon    St. Vincent & Grenadines    Sudan    Suriname    Svalbard & Jan Maye
+n    Swaziland    Sweden    Switzerland    Syria    Taiwan    Tajikistan    Tanzania    Thailand    Timor-Leste
+    Togo    Tokelau    Tonga    Trinidad & Tobago    Tunisia    Turkey    Turkmenistan    Turks & Caicos Island
+s    Tuvalu    U.S. Outlying Islands    U.S. Virgin Islands    Uganda    Ukraine    United Arab Emirates    Uni
+ted Kingdom    United States    Uruguay    Uzbekistan    Vanuatu    Vatican City    Venezuela    Vietnam    Wal
+lis & Futuna    Western Sahara    Yemen    Zambia    Zimbabwe
+[#5] Country/Region:India
+[#6] Phone number:8574642570
+[#7] Other helpful links:https://www.linkedin.com/in/abhinav-ec-mmmut/
+Are the above details correct?
+[Y]es or [N]o: y
+Submitting your response...
+Response saved.
+[#1] Enter current status to be routed to optimal recruiter:
+[1] Currently in high school
+[2] Currently pursuing a degree
+[3] Will complete degree within 1 year
+[4] Professional
+[5] Other
+Enter 1-5: 3
+Are the above details correct?
+[Y]es or [N]o: y
+Submitting your response...
